@@ -512,7 +512,7 @@
     padding-bottom:24px;
   }
   .article-card{
-    background:#fff;
+    background: var(--olive);
     border:1px solid var(--line);
     border-radius:6px;
     overflow:hidden;
@@ -528,7 +528,7 @@
   .article-body{ padding:26px 28px 28px; }
   .article-meta{ font-size:12.5px; color:var(--slate); letter-spacing:.02em; }
   .article-card h3{ font-size:21px; margin-top:12px; margin-bottom:12px; line-height:1.3; }
-  .article-card p{ font-size:14.5px; color:var(--slate); line-height:1.6; }
+  .article-card p{ font-size:14.5px; color:var(--navy-card2); line-height:1.6; }
   .article-card .read-link{
     margin-top:16px;
     display:inline-flex;
@@ -774,6 +774,41 @@
   }
 }
 
+.scroll-cue {
+    position: absolute;
+    left: 50%;
+    bottom: 28px;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-decoration: none;
+    color: var(--maize);
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    opacity: 0.85;
+    transition: opacity .2s;
+  }
+  .scroll-cue:hover { opacity: 1; }
+  .scroll-cue svg {
+    width: 22px; height: 22px;
+    animation: scrollCueBounce 1.8s ease-in-out infinite;
+  }
+  @keyframes scrollCueBounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(8px); }
+  }
+  @media (max-width: 900px) {
+    .scroll-cue { display: none; }
+  }
+
+
+
 </style>
 </head>
 <body>
@@ -797,16 +832,16 @@
         <div class="nav-drop-menu">
           <a href="about.html">About</a>
           <a href="people.html">People</a>
-          <a href="member-companies.html">EVC Member Companies</a>
+          <a href="member-companies.html">Member Companies</a>
           <a href="join-us.html">Join Us</a>
           <a href="contact.html">Contact Us</a>
         </div>
       </div>
-      <a href="technology.html"class="active">Technology</a>
       <a href="facilities.html">Facilities</a>
       <a href="EVC_Workforce_Education.html">Workforce & Education</a>
+      <a href="technology.html">Technology</a>
       <a href="news-events.html">News & Events</a>
-      <a href="join-us.html" class="nav-cta" style="margin-left: 65px;">Login / Join Us</a>
+      <a href="join-us.html" class="nav-cta" style="margin-left: 65px; color:var(--navy)">Login / Join Us</a>
     </div>
 </nav>
 
@@ -814,7 +849,7 @@
   <div class="hero-content">
 
     <div class="hero-text">
-      <div class="eyebrow">Technology Research</div>
+      <div class="eyebrow">Technology</div>
 
       <h1>Where academic rigor meets <em>industry application.</em></h1>
 
@@ -836,10 +871,6 @@
           <div class="lbl">Ways we fund research</div>
         </div>
 
-        <div class="stat">
-          <div class="num">$1M</div>
-          <div class="lbl">Annual seed program</div>
-        </div>
       </div>
     </div>
 
@@ -847,7 +878,15 @@
       <img src="tech.png" alt="Technology">
     </div>
 
+    <a href="#mission" class="scroll-cue" aria-label="Scroll down">
+    <span>Scroll</span>
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 4v14M12 18l-6-6M12 18l6-6"/>
+    </svg>
+  </a>
+
   </div>
+  
 </section>
 
 <div class="section">
@@ -861,7 +900,7 @@
     <div class="section-text">
       <p class="section-intro">
         Technology & Innovation is the motor that drives the Electric Vehicle
-        Center. U-M Engineering's faculty and labs partner with industry leaders
+        Center. U-M's faculty and labs partner with industry leaders
         to advance the technologies defining the next era of electrified mobility.
       </p>
 
@@ -872,7 +911,7 @@
       </p>
 
       <p class="section-intro" style="margin-top: 10px;">
-        Our focus is hardware — how to design, engineer, and manufacture better
+        Our focus includes how to design, engineer, and manufacture better
         propulsion systems, batteries, and charging infrastructure. How they're
         used downstream is important work, but it's not our lane.
       </p>
@@ -934,21 +973,10 @@
     <div class="pillar-row">
       <div class="num">03</div>
       <div>
-        <h3>Core & Exploratory Seed Funding</h3>
+        <h3>Exploratory Seed Funding</h3>
         <div class="kicker">Early-stage research</div>
       </div>
-      <p>Early-stage research, including our MTRAC partnership and annual $1M seed program.</p>
-    </div>
-  </div>
-</div>
-
-<!-- ================= FEDERAL-SCALE IMPACT ================= -->
-<div class="section">
-  <div class="mv-grid" style="grid-template-columns:1fr;">
-    <div class="mv-card">
-      <div class="tag">Building for Federal-Scale Impact</div>
-      <h3 style="max-width:100%;">Our technology leaders are developing federal center-scale research proposals with national laboratory partners including NREL, targeting NSF, DOE, and DoD.</h3>
-      <p style="max-width:100%;">What we bring is distinctive: a Battery Lab operating as a true engineering service, deep industry relationships built over years of joint work, and a track record of moving from workshop to launched project in under a year. That combination lets us convene faculty, companies, and federal partners around research no single participant could tackle alone.</p>
+      <p>Early-stage research, including our MTRAC partnership and annual seed program.</p>
     </div>
   </div>
 </div>
@@ -984,9 +1012,9 @@
 <div class="cta">
   <div>
     <h2>Partner with <em>us</em></h2>
-    <p>Is your company interested in collaborating with U-M Engineering's EV research leaders? We'd love to hear from you.</p>
+    <p>Is your company interested in collaborating with U-M's EV research leaders? We'd love to hear from you.</p>
   </div>
-  <a href="mailto:UM-EVCenter@umich.edu" class="btn">UM-EVCenter@umich.edu</a>
+  <a href="join-us.html" class="btn">Contact Us →</a>
 </div>
 
 </body>

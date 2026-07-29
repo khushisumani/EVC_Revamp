@@ -127,10 +127,10 @@ a { color: inherit; }
   .nav-links a { font-family: 'Roboto', sans-serif; font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color .2s; }
   .nav-links a:hover, .nav-links a.active { color: var(--white); }
   .nav-cta {
-    background: var(--green); color: var(--navy);
+    background: var(--green); color: var(--navy-card2);
     font-family: 'Roboto', sans-serif; font-weight: 700; font-size: 14px;
     padding: 10px 22px; border-radius: 4px; text-decoration: none;
-    transition: background .2s;
+    transition: background .2s; 
   }
   .nav-cta:hover { background: var(--maize-dark); }
 
@@ -401,8 +401,8 @@ a { color: inherit; }
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  font-size: 13px;
-  font-weight: 600;
+  font-size: 18px;
+  font-weight: 1000;
   color: var(--blue);
   text-decoration: none;
   padding-bottom: 4px;
@@ -682,6 +682,7 @@ a { color: inherit; }
   color: rgb(var(--pc));
   text-transform: uppercase;
   text-align: center;
+  margin-top: 50px;
 }
  
 .pillar-divider {
@@ -738,6 +739,18 @@ a { color: inherit; }
   height: 2px;
   background: linear-gradient(to right, transparent, rgba(255,203,5,0.25), rgba(255,203,5,0.5), rgba(255,203,5,0.25), transparent);
   margin-top: -2px;
+}
+
+.pillar-image {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    transition: transform 0.25s ease;
+    margin-top: 8px;
+}
+
+.pillar-wrap:hover .pillar-image {
+    transform: scale(1.1);
 }
 
 /* ============ RESPONSIVE ============ */
@@ -983,16 +996,16 @@ a { color: inherit; }
         <div class="nav-drop-menu">
           <a href="about.html">About</a>
           <a href="people.html">People</a>
-          <a href="member-companies.html">EVC Member Companies</a>
+          <a href="member-companies.html">Member Companies</a>
           <a href="join-us.html">Join Us</a>
           <a href="contact.html">Contact Us</a>
         </div>
       </div>
-      <a href="technology.html">Technology</a>
       <a href="facilities.html">Facilities</a>
       <a href="EVC_Workforce_Education.html">Workforce & Education</a>
+      <a href="technology.html">Technology</a>
       <a href="news-events.html">News & Events</a>
-      <a href="join-us.html" class="nav-cta" style="margin-left: 65px;">Login / Join Us</a>
+      <a href="join-us.html" class="nav-cta" style="margin-left: 65px; color:var(--navy)">Login / Join Us</a>
     </div>
 </nav>
 
@@ -1034,9 +1047,9 @@ a { color: inherit; }
         <span class="eyebrow-text">Electric Vehicle Center</span>
         <span class="eyebrow-line"></span>
       </div>
-      <h3 class="section-heading">Recent news &amp; events</h3>
+      <h3 class="section-heading">Recent EVC news &amp; events</h3>
     </div>
-    <a class="view-all" href="news-events.html">All news &amp; events <i class="ti ti-arrow-right"></i></a>
+    <a class="view-all" href="news-events.html">All EVC news &amp; events <i class="ti ti-arrow-right"></i></a>
   </div>
 
   <div class="cards-grid">
@@ -1087,53 +1100,51 @@ a { color: inherit; }
   </div>
  
   <h3 class="section-heading">Our <em>strategic</em> pillars</h3>
-  <p class="section-sub">Three interconnected areas of focus driving the EVC's mission to advance Michigan's mobility future.</p>
+  <p class="section-sub" style="max-width: 100vw; margin-top: 20px;">Three interconnected areas of focus driving the EVC's mission to advance the future of mobility.</p>
  
   <div class="pillars-grid">
- 
-    <div class="pillar-wrap pillar-purple">
+
+    <div class="pillar-wrap pillar-orange">
       <div class="pillar-cap-top"></div>
       <div class="pillar-shaft">
-        <div class="pillar-icon-bg">
-          <i class="ti ti-cpu pillar-icon" aria-hidden="true"></i>
+        <div class="pillar-icon-bg" style="margin-top: 20px;">
+          <img src="fac.png" alt="Facilities" class="pillar-image">
         </div>
-        <div class="pillar-label">Technology</div>
-        <div class="pillar-divider"></div>
-        <div class="pillar-body">R&D of innovative EV technology through public-private partnerships and a collaborative industry roadmap.</div>
+        <div class="pillar-label">Facilities</div>
+      
+        <div class="pillar-body">New training and R&D facility with an upgraded Battery Lab for hands-on education and research.</div>
       </div>
       <div class="pillar-cap-bottom"></div>
       <div class="pillar-base"></div>
       <div class="pillar-number">01</div>
     </div>
 
-     <div class="pillar-wrap pillar-orange">
-      <div class="pillar-cap-top"></div>
-      <div class="pillar-shaft">
-        <div class="pillar-icon-bg">
-          <i class="ti ti-building-factory-2 pillar-icon" aria-hidden="true"></i>
-        </div>
-        <div class="pillar-label">Facilities</div>
-        <div class="pillar-divider"></div>
-        <div class="pillar-body">New training and R&D facility with an upgraded Battery Lab for hands-on education and research.</div>
-      </div>
-      <div class="pillar-cap-bottom"></div>
-      <div class="pillar-base"></div>
-      <div class="pillar-number">03</div>
-    </div>
- 
     <div class="pillar-wrap pillar-green">
       <div class="pillar-cap-top"></div>
       <div class="pillar-shaft">
         <div class="pillar-icon-bg">
-          <i class="ti ti-school pillar-icon" aria-hidden="true"></i>
+          <img src="wande.png" alt="Workforce" class="pillar-image" style="max-width: 120px; margin-top: 45px;">
         </div>
         <div class="pillar-label">Workforce &amp; Education</div>
-        <div class="pillar-divider"></div>
-        <div class="pillar-body">Programs for current and future mobility workers across U-M and partner institutions statewide, backed by an industry-inspired talent network with dedicated focus on Michigan's underserved communities.</div>
+        <div class="pillar-body">Programs for mobility workers across U-M and partner institutions, backed by a talent network with dedicated focus on U-M's underserved communities.</div>
       </div>
       <div class="pillar-cap-bottom"></div>
       <div class="pillar-base"></div>
       <div class="pillar-number">02</div>
+    </div>
+ 
+    <div class="pillar-wrap pillar-purple">
+      <div class="pillar-cap-top"></div>
+      <div class="pillar-shaft">
+        <div class="pillar-icon-bg" style="margin-top: 20px;">
+          <img src="tech.png" alt="Technology" class="pillar-image">
+        </div>
+        <div class="pillar-label">Technology</div>
+        <div class="pillar-body">R&D of innovative EV technology through public-private partnerships and a collaborative industry roadmap.</div>
+      </div>
+      <div class="pillar-cap-bottom"></div>
+      <div class="pillar-base"></div>
+      <div class="pillar-number">03</div>
     </div>
  
     <div class="floor-line"></div>
